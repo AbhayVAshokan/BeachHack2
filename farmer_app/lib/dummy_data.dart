@@ -6,27 +6,27 @@ import './models/meal.dart';
 const DUMMY_CATEGORIES = const [
   Category(
     id: 'c1',
-    title: 'Italian',
+    title: 'Coconut',
     color: Colors.purple,
   ),
   Category(
     id: 'c2',
-    title: 'Quick & Easy',
+    title: 'Wheat',
     color: Colors.red,
   ),
   Category(
     id: 'c3',
-    title: 'Hamburgers',
+    title: 'Paddy',
     color: Colors.orange,
   ),
   Category(
     id: 'c4',
-    title: 'German',
+    title: 'Soyabean',
     color: Colors.amber,
   ),
   Category(
     id: 'c5',
-    title: 'Light & Lovely',
+    title: 'Niger seeds',
     color: Colors.blue,
   ),
   Category(
@@ -36,22 +36,22 @@ const DUMMY_CATEGORIES = const [
   ),
   Category(
     id: 'c7',
-    title: 'Breakfast',
+    title: 'Maize',
     color: Colors.lightBlue,
   ),
   Category(
     id: 'c8',
-    title: 'Asian',
+    title: 'Ragi',
     color: Colors.lightGreen,
   ),
   Category(
     id: 'c9',
-    title: 'French',
+    title: 'Moong',
     color: Colors.pink,
   ),
   Category(
     id: 'c10',
-    title: 'Summer',
+    title: 'Sunflower',
     color: Colors.teal,
   ),
 ];
@@ -63,11 +63,11 @@ const DUMMY_MEALS = const [
       'c1',
       'c2',
     ],
-    title: 'Spaghetti with Tomato Sauce',
+    title: 'Coconut',
     affordability: Affordability.Affordable,
     complexity: Complexity.Simple,
     imageUrl:
-        'https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Spaghetti_Bolognese_mit_Parmesan_oder_Grana_Padano.jpg/800px-Spaghetti_Bolognese_mit_Parmesan_oder_Grana_Padano.jpg',
+        'https://wallpaperaccess.com/full/1455672.jpg',
     duration: 20,
     ingredients: [
       '4 Tomatoes',

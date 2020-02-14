@@ -23,32 +23,32 @@ class MealItem extends StatelessWidget {
   String get complexityText {
     switch (complexity) {
       case Complexity.Simple:
-        return 'Simple';
+        return 'Trending high';
         break;
       case Complexity.Challenging:
-        return 'Challenging';
+        return 'Trending low';
         break;
       case Complexity.Hard:
-        return 'Hard';
+        return 'Trending high';
         break;
       default:
-        return 'Unknown';
+        return 'Trending low';
     }
   }
 
   String get affordabilityText {
     switch (affordability) {
       case Affordability.Affordable:
-        return 'Affordable';
+        return 'April';
         break;
       case Affordability.Pricey:
-        return 'Pricey';
+        return 'May';
         break;
       case Affordability.Luxurious:
-        return 'Expensive';
+        return 'February';
         break;
       default:
-        return 'Unknown';
+        return 'March';
     }
   }
 
@@ -116,18 +116,18 @@ class MealItem extends StatelessWidget {
                   Row(
                     children: <Widget>[
                       Icon(
-                        Icons.schedule,
+                        Icons.attach_money,
                       ),
                       SizedBox(
                         width: 6,
                       ),
-                      Text('$duration min'),
+                      Text('Rs. $duration'),
                     ],
                   ),
                   Row(
                     children: <Widget>[
                       Icon(
-                        Icons.work,
+                        Icons.trending_up,
                       ),
                       SizedBox(
                         width: 6,
@@ -138,7 +138,7 @@ class MealItem extends StatelessWidget {
                   Row(
                     children: <Widget>[
                       Icon(
-                        Icons.attach_money,
+                        Icons.access_time,
                       ),
                       SizedBox(
                         width: 6,
