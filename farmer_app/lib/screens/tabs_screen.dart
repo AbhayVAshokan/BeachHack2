@@ -12,7 +12,7 @@ class _TabsScreenState extends State<TabsScreen> {
   final List<Map<String, Object>> _pages = [
     {
       'page': CategoriesScreen(),
-      'title': 'Categories',
+      'title': 'Market Requirements',
     },
     {
       'page': FavoritesScreen(),
@@ -44,13 +44,13 @@ class _TabsScreenState extends State<TabsScreen> {
         items: [
           BottomNavigationBarItem(
             backgroundColor: Theme.of(context).primaryColor,
-            icon: Icon(Icons.category),
-            title: Text('Categories'),
+            icon: Icon(Icons.timeline),
+            title: Text('Long Life'),
           ),
           BottomNavigationBarItem(
             backgroundColor: Theme.of(context).primaryColor,
-            icon: Icon(Icons.star),
-            title: Text('Favorites'),
+            icon: Icon(Icons.timelapse),
+            title: Text('Short Life'),
           ),
         ],
       ),
