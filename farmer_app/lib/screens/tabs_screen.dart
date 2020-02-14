@@ -27,6 +27,21 @@ class _TabsScreenState extends State<TabsScreen> {
     });
   }
 
+  void _showBottomNavigation(context) {
+    showModalBottomSheet(
+        context: context,
+        builder: (_) {
+          return Container(
+            color: Colors.black26,
+            child: Card(
+              color: Colors.black12,
+              elevation: 10,
+              child: Text("Hello World"),
+            ),
+          );
+        });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -54,6 +69,13 @@ class _TabsScreenState extends State<TabsScreen> {
           ),
         ],
       ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () => _showBottomNavigation(context),
+        child: Icon(
+          Icons.cloud,
+        ),
+      ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
     );
   }
 }

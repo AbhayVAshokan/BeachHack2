@@ -30,6 +30,21 @@ class MealDetailScreen extends StatelessWidget {
     );
   }
 
+  void _showBottomNavigation(context) {
+    showModalBottomSheet(
+        context: context,
+        builder: (_) {
+          return Container(
+            color: Colors.black26,
+            child: Card(
+              color: Colors.black12,
+              elevation: 10,
+              child: Text("Hello World"),
+            ),
+          );
+        });
+  }
+
   @override
   Widget build(BuildContext context) {
     final mealId = ModalRoute.of(context).settings.arguments as String;
@@ -53,14 +68,14 @@ class MealDetailScreen extends StatelessWidget {
             buildContainer(
               ListView.builder(
                 itemBuilder: (ctx, index) => Card(
-                      color: Theme.of(context).accentColor,
-                      child: Padding(
-                          padding: EdgeInsets.symmetric(
-                            vertical: 5,
-                            horizontal: 10,
-                          ),
-                          child: Text(selectedMeal.ingredients[index])),
-                    ),
+                  color: Theme.of(context).accentColor,
+                  child: Padding(
+                      padding: EdgeInsets.symmetric(
+                        vertical: 5,
+                        horizontal: 10,
+                      ),
+                      child: Text(selectedMeal.ingredients[index])),
+                ),
                 itemCount: selectedMeal.ingredients.length,
               ),
             ),
@@ -68,24 +83,31 @@ class MealDetailScreen extends StatelessWidget {
             buildContainer(
               ListView.builder(
                 itemBuilder: (ctx, index) => Column(
-                      children: [
-                        ListTile(
-                          leading: CircleAvatar(
-                            child: Text('# ${(index + 1)}'),
-                          ),
-                          title: Text(
-                            selectedMeal.steps[index],
-                          ),
-                        ),
-                        Divider()
-                      ],
+                  children: [
+                    ListTile(
+                      leading: CircleAvatar(
+                        child: Text('# ${(index + 1)}'),
+                      ),
+                      title: Text(
+                        selectedMeal.steps[index],
+                      ),
                     ),
+                    Divider()
+                  ],
+                ),
                 itemCount: selectedMeal.steps.length,
               ),
             ),
           ],
         ),
       ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () => _showBottomNavigation(context),
+        child: Icon(
+          Icons.cloud,
+        ),
+      ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
     );
   }
 }

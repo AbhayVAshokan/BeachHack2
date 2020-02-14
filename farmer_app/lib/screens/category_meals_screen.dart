@@ -10,6 +10,21 @@ class CategoryMealsScreen extends StatelessWidget {
 
   // CategoryMealsScreen(this.categoryId, this.categoryTitle);
 
+    void _showBottomNavigation(context) {
+    showModalBottomSheet(
+        context: context,
+        builder: (_) {
+          return Container(
+            color: Colors.black26,
+            child: Card(
+              color: Colors.black12,
+              elevation: 10,
+              child: Text("Hello World"),
+            ),
+          );
+        });
+  }
+
   @override
   Widget build(BuildContext context) {
     final routeArgs =
@@ -36,6 +51,13 @@ class CategoryMealsScreen extends StatelessWidget {
         },
         itemCount: categoryMeals.length,
       ),
+      floatingActionButton: FloatingActionButton(
+        onPressed:  () => _showBottomNavigation(context),
+        child: Icon(
+          Icons.cloud,
+        ),
+      ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
     );
   }
 }
