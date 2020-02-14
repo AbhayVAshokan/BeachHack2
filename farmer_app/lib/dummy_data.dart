@@ -31,7 +31,7 @@ const DUMMY_CATEGORIES = const [
   ),
   Category(
     id: 'c6',
-    title: 'Exotic',
+    title: 'Jowar',
     color: Colors.green,
   ),
   Category(
@@ -51,7 +51,7 @@ const DUMMY_CATEGORIES = const [
   ),
   Category(
     id: 'c10',
-    title: 'Sunflower',
+    title: 'Niger seeds',
     color: Colors.teal,
   ),
 ];
@@ -61,14 +61,12 @@ const DUMMY_MEALS = const [
     id: 'm1',
     categories: [
       'c1',
-      'c2',
     ],
     title: 'Coconut',
     affordability: Affordability.Affordable,
     complexity: Complexity.Simple,
-    imageUrl:
-        'https://wallpaperaccess.com/full/1455672.jpg',
-    duration: 20,
+    imageUrl: 'https://wallpaperaccess.com/full/1455672.jpg',
+    duration: 28,
     ingredients: [
       '4 Tomatoes',
       '1 Tablespoon of Olive Oil',
@@ -96,7 +94,7 @@ const DUMMY_MEALS = const [
     categories: [
       'c2',
     ],
-    title: 'Toast Hawaii',
+    title: 'Wheat',
     affordability: Affordability.Affordable,
     complexity: Complexity.Simple,
     imageUrl:
@@ -122,10 +120,9 @@ const DUMMY_MEALS = const [
   Meal(
     id: 'm3',
     categories: [
-      'c2',
       'c3',
     ],
-    title: 'Classic Hamburger',
+    title: 'Paddy',
     affordability: Affordability.Pricey,
     complexity: Complexity.Simple,
     imageUrl:
@@ -156,7 +153,7 @@ const DUMMY_MEALS = const [
     categories: [
       'c4',
     ],
-    title: 'Wiener Schnitzel',
+    title: 'Soyabean',
     affordability: Affordability.Luxurious,
     complexity: Complexity.Challenging,
     imageUrl:
@@ -189,11 +186,9 @@ const DUMMY_MEALS = const [
   Meal(
     id: 'm5',
     categories: [
-      'c2'
-          'c5',
-      'c10',
+      'c5',
     ],
-    title: 'Salad with Smoked Salmon',
+    title: 'Niger seeds',
     affordability: Affordability.Luxurious,
     complexity: Complexity.Simple,
     imageUrl:
@@ -226,9 +221,8 @@ const DUMMY_MEALS = const [
     id: 'm6',
     categories: [
       'c6',
-      'c10',
     ],
-    title: 'Delicious Orange Mousse',
+    title: 'Jowar',
     affordability: Affordability.Affordable,
     complexity: Complexity.Hard,
     imageUrl:
@@ -263,7 +257,7 @@ const DUMMY_MEALS = const [
     categories: [
       'c7',
     ],
-    title: 'Pancakes',
+    title: 'Maize',
     affordability: Affordability.Affordable,
     complexity: Complexity.Simple,
     imageUrl:
@@ -294,7 +288,7 @@ const DUMMY_MEALS = const [
     categories: [
       'c8',
     ],
-    title: 'Creamy Indian Chicken Curry',
+    title: 'Ragi',
     affordability: Affordability.Pricey,
     complexity: Complexity.Challenging,
     imageUrl:
@@ -327,7 +321,7 @@ const DUMMY_MEALS = const [
     categories: [
       'c9',
     ],
-    title: 'Chocolate Souffle',
+    title: 'Moong',
     affordability: Affordability.Affordable,
     complexity: Complexity.Hard,
     imageUrl:
@@ -374,11 +368,9 @@ const DUMMY_MEALS = const [
   Meal(
     id: 'm10',
     categories: [
-      'c2',
-      'c5',
       'c10',
     ],
-    title: 'Asparagus Salad with Cherry Tomatoes',
+    title: 'Niger seeds',
     affordability: Affordability.Luxurious,
     complexity: Complexity.Simple,
     imageUrl:

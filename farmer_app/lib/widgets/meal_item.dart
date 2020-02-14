@@ -127,7 +127,7 @@ class MealItem extends StatelessWidget {
                   Row(
                     children: <Widget>[
                       Icon(
-                        Icons.trending_up,
+                        complexityText.compareTo("Trending high") != 0 ?  Icons.trending_down : Icons.trending_up,
                       ),
                       SizedBox(
                         width: 6,
