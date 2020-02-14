@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-// import '../screens/meal_detail_screen.dart';
+import '../screens/meal_detail_screen.dart';
 import '../models/meal.dart';
 
 class MealItem extends StatelessWidget {
@@ -53,10 +53,10 @@ class MealItem extends StatelessWidget {
   }
 
   void selectMeal(BuildContext context) {
-    // Navigator.of(context).pushNamed(
-    //   MealDetailScreen.routeName,
-    //   arguments: id,
-    // );
+    Navigator.of(context).pushNamed(
+      MealDetailScreen.routeName,
+      arguments: id,
+    );
   }
 
   @override
@@ -78,10 +78,10 @@ class MealItem extends StatelessWidget {
                     topLeft: Radius.circular(15),
                     topRight: Radius.circular(15),
                   ),
-                  child: Image.network(
+                  child: Image.asset(
                     imageUrl,
-                    height: 250,
-                    width: double.infinity,
+                    height: 355,
+                    width: 474,
                     fit: BoxFit.cover,
                   ),
                 ),
@@ -127,7 +127,9 @@ class MealItem extends StatelessWidget {
                   Row(
                     children: <Widget>[
                       Icon(
-                        complexityText.compareTo("Trending high") != 0 ?  Icons.trending_down : Icons.trending_up,
+                        complexityText.compareTo("Trending high") != 0
+                            ? Icons.trending_down
+                            : Icons.trending_up,
                       ),
                       SizedBox(
                         width: 6,

@@ -57,7 +57,7 @@ class CategoryMealsScreen extends StatelessWidget {
           Icons.cloud,
         ),
       ),
-      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
     );
   }
 }

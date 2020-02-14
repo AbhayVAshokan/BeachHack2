@@ -26,10 +26,26 @@ class CategoryItem extends StatelessWidget {
       splashColor: Theme.of(context).primaryColor,
       borderRadius: BorderRadius.circular(15),
       child: Container(
-        padding: const EdgeInsets.all(15),
-        child: Text(
-          title,
-          style: Theme.of(context).textTheme.title,
+        padding: const EdgeInsets.only(top: 15, right: 7),
+        child: Column(
+          // mainAxisAlignment: MainAxisAlignment.spaceAround,
+          children: <Widget>[
+            FittedBox(
+              child: Text(
+                title,
+                style: Theme.of(context).textTheme.title,
+              ),
+            ),
+            SizedBox(height: 25),
+            Align(
+              alignment: Alignment.bottomRight,
+              child: Icon(
+                Icons.trending_up,
+                size: 40,
+                color: Colors.white,
+              ),
+            ),
+          ],
         ),
         decoration: BoxDecoration(
           gradient: LinearGradient(
