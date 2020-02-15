@@ -16,7 +16,7 @@ class _TabsScreenState extends State<TabsScreen> {
     },
     {
       'page': FavoritesScreen(),
-      'title': 'Your Favorite',
+      'title': 'Market Requirements',
     },
   ];
   int _selectedPageIndex = 0;
