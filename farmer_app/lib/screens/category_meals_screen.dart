@@ -10,7 +10,7 @@ class CategoryMealsScreen extends StatelessWidget {
 
   // CategoryMealsScreen(this.categoryId, this.categoryTitle);
 
-    void _showBottomNavigation(context) {
+  void _showBottomNavigation(context) {
     showModalBottomSheet(
         context: context,
         builder: (_) {
@@ -38,21 +38,79 @@ class CategoryMealsScreen extends StatelessWidget {
       appBar: AppBar(
         title: Text(categoryTitle),
       ),
-      body: ListView.builder(
-        itemBuilder: (ctx, index) {
-          return MealItem(
-            id: categoryMeals[index].id,
-            title: categoryMeals[index].title,
-            imageUrl: categoryMeals[index].imageUrl,
-            duration: categoryMeals[index].duration,
-            affordability: categoryMeals[index].affordability,
-            complexity: categoryMeals[index].complexity,
-          );
-        },
-        itemCount: categoryMeals.length,
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.spaceAround,
+        children: <Widget>[
+          Expanded(
+            child: ListView.builder(
+              itemBuilder: (ctx, index) {
+                return MealItem(
+                  retailPrice: categoryMeals[index].retailPrice,
+                  id: categoryMeals[index].id,
+                  title: categoryMeals[index].title,
+                  imageUrl: categoryMeals[index].imageUrl,
+                  duration: categoryMeals[index].duration,
+                  affordability: categoryMeals[index].affordability,
+                  complexity: categoryMeals[index].complexity,
+                );
+              },
+              itemCount: categoryMeals.length,
+            ),
+          ),
+          Container(
+            padding: EdgeInsets.all(5),
+            width: MediaQuery.of(context).size.width,
+            height: (MediaQuery.of(context).size.height - 5) * 0.40,
+            child: Card(
+              child: Align(
+                alignment: Alignment.topLeft,
+                child: Row(
+                  // mainAxisAlignment: MainAxisAlignment.spa,
+                  children: <Widget>[
+                    Container(
+                      height: 125,
+                      width: 125,
+                      child: Container(
+                        margin: EdgeInsets.all(5),
+                        child: Card(
+                          color: Colors.lightGreen,
+                          child: Center(
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                              children: <Widget>[
+                                SizedBox(
+                                  height: 5,
+                                ),
+                                Text(
+                                  "RETAIL PRICE",
+                                  style: TextStyle(
+                                      fontFamily: "Roboto", fontSize: 15),
+                                ),
+                                Text(
+                                  "Rs.10",
+                                  style: TextStyle(
+                                    fontSize: 30,
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
+                                SizedBox(
+                                  height: 5,
+                                ),
+                              ],
+                            ),
+                          ),
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+          ),
+        ],
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed:  () => _showBottomNavigation(context),
+        onPressed: () => _showBottomNavigation(context),
         child: Icon(
           Icons.cloud,
         ),

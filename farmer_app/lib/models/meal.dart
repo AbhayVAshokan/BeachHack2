@@ -20,6 +20,7 @@ class Meal {
   final List<String> ingredients;
   final List<String> steps;
   final int duration;
+  final int retailPrice;
   final Complexity complexity;
   final Affordability affordability;
   final bool isGlutenFree;
@@ -41,5 +42,6 @@ class Meal {
     @required this.isLactoseFree,
     @required this.isVegan,
     @required this.isVegetarian,
+    @required this.retailPrice,
   });
 }

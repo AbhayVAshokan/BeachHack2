@@ -67,6 +67,7 @@ const DUMMY_MEALS = const [
     complexity: Complexity.Simple,
     imageUrl: 'lib/assets/images/coconut.jpg',
     duration: 28,
+    retailPrice: 32,
     ingredients: [
       '4 Tomatoes',
       '1 Tablespoon of Olive Oil',
@@ -99,7 +100,8 @@ const DUMMY_MEALS = const [
     complexity: Complexity.Simple,
     imageUrl:
         'lib/assets/images/wheat.jpg',
-    duration: 10,
+    duration: 15,
+    retailPrice: 26,
     ingredients: [
       '1 Slice White Bread',
       '1 Slice Ham',
@@ -127,7 +129,8 @@ const DUMMY_MEALS = const [
     complexity: Complexity.Simple,
     imageUrl:
         'lib/assets/images/paddy.jpg',
-    duration: 45,
+    duration: 18,
+    retailPrice: 25,
     ingredients: [
       '300g Cattle Hack',
       '1 Tomato',
@@ -158,7 +161,8 @@ const DUMMY_MEALS = const [
     complexity: Complexity.Challenging,
     imageUrl:
         'lib/assets/images/soyabean.jpg',
-    duration: 60,
+    duration: 40,
+    retailPrice: 53,
     ingredients: [
       '8 Veal Cutlets',
       '4 Eggs',
@@ -193,7 +197,8 @@ const DUMMY_MEALS = const [
     complexity: Complexity.Simple,
     imageUrl:
         'lib/assets/images/niger_seeds.jpg',
-    duration: 15,
+    duration: 45,
+    retailPrice: 60,
     ingredients: [
       'Arugula',
       'Lamb\'s Lettuce',
@@ -227,7 +232,8 @@ const DUMMY_MEALS = const [
     complexity: Complexity.Hard,
     imageUrl:
         'lib/assets/images/Jowar.jpg',
-    duration: 240,
+    duration: 21,
+    retailPrice: 32,
     ingredients: [
       '4 Sheets of Gelatine',
       '150ml Orange Juice',
@@ -262,7 +268,8 @@ const DUMMY_MEALS = const [
     complexity: Complexity.Simple,
     imageUrl:
         'lib/assets/images/maize.jpg',
-    duration: 20,
+    duration: 14,
+    retailPrice: 26,
     ingredients: [
       '1 1/2 Cups all-purpose Flour',
       '3 1/2 Teaspoons Baking Powder',
@@ -293,7 +300,8 @@ const DUMMY_MEALS = const [
     complexity: Complexity.Challenging,
     imageUrl:
         'lib/assets/images/ragi.jpg',
-    duration: 35,
+    duration: 36,
+    retailPrice: 47,
     ingredients: [
       '4 Chicken Breasts',
       '1 Onion',
@@ -326,7 +334,8 @@ const DUMMY_MEALS = const [
     complexity: Complexity.Hard,
     imageUrl:
         'lib/assets/images/moong.jpg',
-    duration: 45,
+    duration: 50,
+    retailPrice: 66,
     ingredients: [
       '1 Teaspoon melted Butter',
       '2 Tablespoons white Sugar',
@@ -375,7 +384,8 @@ const DUMMY_MEALS = const [
     complexity: Complexity.Simple,
     imageUrl:
         'lib/assets/images/safflower_seeds.jpg',
-    duration: 30,
+    duration: 34,
+    retailPrice: 44,
     ingredients: [
       'White and Green Asparagus',
       '30g Pine Nuts',

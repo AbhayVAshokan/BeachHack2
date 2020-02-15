@@ -10,6 +10,7 @@ class MealItem extends StatelessWidget {
   final int duration;
   final Complexity complexity;
   final Affordability affordability;
+  final int retailPrice;
 
   MealItem({
     @required this.id,
@@ -18,6 +19,7 @@ class MealItem extends StatelessWidget {
     @required this.affordability,
     @required this.complexity,
     @required this.duration,
+    @required this.retailPrice,
   });
 
   String get complexityText {
@@ -80,8 +82,8 @@ class MealItem extends StatelessWidget {
                   ),
                   child: Image.asset(
                     imageUrl,
-                    height: 355,
-                    width: 474,
+                    height: (MediaQuery.of(context).size.height - 5) * 0.4,
+                    width: MediaQuery.of(context).size.width,
                     fit: BoxFit.cover,
                   ),
                 ),
