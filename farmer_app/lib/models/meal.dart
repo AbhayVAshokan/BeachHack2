@@ -27,6 +27,7 @@ class Meal {
   final bool isLactoseFree;
   final bool isVegan;
   final bool isVegetarian;
+  final dummyType;
 
   const Meal({
     @required this.id,
@@ -43,5 +44,6 @@ class Meal {
     @required this.isVegan,
     @required this.isVegetarian,
     @required this.retailPrice,
+    @required this.dummyType,
   });
 }

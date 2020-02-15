@@ -42,7 +42,8 @@ class _TabsScreenState extends State<TabsScreen> {
                   child: Row(
                     children: <Widget>[
                       Container(
-                        padding: EdgeInsets.only(top: 5, bottom: 5, left: 5, right: 5),
+                        padding: EdgeInsets.only(
+                            top: 5, bottom: 5, left: 5, right: 5),
                         child: Image.asset(
                           'lib/assets/images/thunder_shower.png',
                           height: 150,
@@ -53,7 +54,8 @@ class _TabsScreenState extends State<TabsScreen> {
                       Container(
                         width: 200,
                         child: Text(
-                          'Due to overwhelming influence of North-Westerly winds it is expected that there will be over 520 cm of rain in North-Eastern and Southern States.', style: TextStyle(fontFamily: 'Roboto', fontSize: 17),
+                          'Due to overwhelming influence of North-Westerly winds it is expected that there will be over 520 cm of rain in North-Eastern and Southern States.',
+                          style: TextStyle(fontFamily: 'Roboto', fontSize: 17),
                           maxLines: 10,
                           overflow: TextOverflow.ellipsis,
                         ),
@@ -72,6 +74,11 @@ class _TabsScreenState extends State<TabsScreen> {
     return Scaffold(
       appBar: AppBar(
         title: Text(_pages[_selectedPageIndex]['title']),
+        actions: <Widget>[
+          IconButton(
+              icon: Icon(Icons.cloud),
+              onPressed: () => _showBottomNavigation(context)),
+        ],
       ),
       body: _pages[_selectedPageIndex]['page'],
       bottomNavigationBar: BottomNavigationBar(

@@ -3,9 +3,12 @@ import 'package:toast/toast.dart';
 
 import '../widgets/meal_item.dart';
 import '../dummy_data.dart';
+// import '../dummy_data_short_life.dart' as second;
 
 class CategoryMealsScreen extends StatefulWidget {
   static const routeName = '/category-meals';
+  CategoryMealsScreen();
+
 
   @override
   _CategoryMealsScreenState createState() => _CategoryMealsScreenState();
@@ -79,7 +82,7 @@ class _CategoryMealsScreenState extends State<CategoryMealsScreen> {
                                           fontFamily: "Roboto", fontSize: 15),
                                     ),
                                     Text(
-                                      "Rs.10",
+                                      "Rs.35",
                                       style: TextStyle(
                                         fontSize: 30,
                                         fontWeight: FontWeight.bold,

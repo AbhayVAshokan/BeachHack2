@@ -7,57 +7,68 @@ const DUMMY_CATEGORIES = const [
   Category(
     id: 'c1',
     title: 'Coconut',
+    dummyType: 1,
     color: Colors.purple,
   ),
   Category(
     id: 'c2',
     title: 'Wheat',
+    dummyType: 1,
     color: Colors.red,
   ),
   Category(
     id: 'c3',
     title: 'Paddy',
+    dummyType: 1,
     color: Colors.orange,
   ),
   Category(
     id: 'c4',
     title: 'Soyabean',
+    dummyType: 1,
     color: Colors.amber,
   ),
   Category(
     id: 'c5',
     title: 'Niger seeds',
-    color: Colors.blue,
+    dummyType: 1,
+    color: Colors.green,
   ),
   Category(
     id: 'c6',
     title: 'Jowar',
-    color: Colors.green,
+    dummyType: 1,
+    color: Colors.blue,
   ),
   Category(
     id: 'c7',
     title: 'Maize',
+    dummyType: 1,
     color: Colors.lightBlue,
   ),
   Category(
     id: 'c8',
     title: 'Ragi',
+    dummyType: 1,
     color: Colors.lightGreen,
   ),
   Category(
     id: 'c9',
     title: 'Moong',
+    dummyType: 1,
     color: Colors.pink,
   ),
   Category(
     id: 'c10',
     title: 'Safflower seeds',
+    dummyType: 1,
     color: Colors.teal,
   ),
 ];
 
 const DUMMY_MEALS = const [
   Meal(
+    dummyType: 0,
     id: 'm1',
     categories: [
       'c1',
@@ -91,6 +102,7 @@ const DUMMY_MEALS = const [
     isLactoseFree: true,
   ),
   Meal(
+    dummyType: 0,
     id: 'm2',
     categories: [
       'c2',
@@ -98,8 +110,7 @@ const DUMMY_MEALS = const [
     title: 'Wheat',
     affordability: Affordability.Affordable,
     complexity: Complexity.Simple,
-    imageUrl:
-        'lib/assets/images/wheat.jpg',
+    imageUrl: 'lib/assets/images/wheat.jpg',
     duration: 15,
     retailPrice: 26,
     ingredients: [
@@ -120,6 +131,7 @@ const DUMMY_MEALS = const [
     isLactoseFree: false,
   ),
   Meal(
+    dummyType: 0,
     id: 'm3',
     categories: [
       'c3',
@@ -127,8 +139,7 @@ const DUMMY_MEALS = const [
     title: 'Paddy',
     affordability: Affordability.Pricey,
     complexity: Complexity.Simple,
-    imageUrl:
-        'lib/assets/images/paddy.jpg',
+    imageUrl: 'lib/assets/images/paddy.jpg',
     duration: 18,
     retailPrice: 25,
     ingredients: [
@@ -152,6 +163,7 @@ const DUMMY_MEALS = const [
     isLactoseFree: true,
   ),
   Meal(
+    dummyType: 0,
     id: 'm4',
     categories: [
       'c4',
@@ -159,8 +171,7 @@ const DUMMY_MEALS = const [
     title: 'Soyabean',
     affordability: Affordability.Luxurious,
     complexity: Complexity.Challenging,
-    imageUrl:
-        'lib/assets/images/soyabean.jpg',
+    imageUrl: 'lib/assets/images/soyabean.jpg',
     duration: 40,
     retailPrice: 53,
     ingredients: [
@@ -188,6 +199,7 @@ const DUMMY_MEALS = const [
     isLactoseFree: false,
   ),
   Meal(
+    dummyType: 0,
     id: 'm5',
     categories: [
       'c5',
@@ -195,8 +207,7 @@ const DUMMY_MEALS = const [
     title: 'Niger seeds',
     affordability: Affordability.Luxurious,
     complexity: Complexity.Simple,
-    imageUrl:
-        'lib/assets/images/niger_seeds.jpg',
+    imageUrl: 'lib/assets/images/niger_seeds.jpg',
     duration: 45,
     retailPrice: 60,
     ingredients: [
@@ -223,6 +234,7 @@ const DUMMY_MEALS = const [
     isLactoseFree: true,
   ),
   Meal(
+    dummyType: 0,
     id: 'm6',
     categories: [
       'c6',
@@ -230,8 +242,7 @@ const DUMMY_MEALS = const [
     title: 'Jowar',
     affordability: Affordability.Affordable,
     complexity: Complexity.Hard,
-    imageUrl:
-        'lib/assets/images/Jowar.jpg',
+    imageUrl: 'lib/assets/images/Jowar.jpg',
     duration: 21,
     retailPrice: 32,
     ingredients: [
@@ -259,6 +270,7 @@ const DUMMY_MEALS = const [
     isLactoseFree: false,
   ),
   Meal(
+    dummyType: 0,
     id: 'm7',
     categories: [
       'c7',
@@ -266,8 +278,7 @@ const DUMMY_MEALS = const [
     title: 'Maize',
     affordability: Affordability.Affordable,
     complexity: Complexity.Simple,
-    imageUrl:
-        'lib/assets/images/maize.jpg',
+    imageUrl: 'lib/assets/images/maize.jpg',
     duration: 14,
     retailPrice: 26,
     ingredients: [
@@ -291,6 +302,7 @@ const DUMMY_MEALS = const [
     isLactoseFree: false,
   ),
   Meal(
+    dummyType: 0,
     id: 'm8',
     categories: [
       'c8',
@@ -298,8 +310,7 @@ const DUMMY_MEALS = const [
     title: 'Ragi',
     affordability: Affordability.Pricey,
     complexity: Complexity.Challenging,
-    imageUrl:
-        'lib/assets/images/ragi.jpg',
+    imageUrl: 'lib/assets/images/ragi.jpg',
     duration: 36,
     retailPrice: 47,
     ingredients: [
@@ -325,6 +336,7 @@ const DUMMY_MEALS = const [
     isLactoseFree: true,
   ),
   Meal(
+    dummyType: 0,
     id: 'm9',
     categories: [
       'c9',
@@ -332,8 +344,7 @@ const DUMMY_MEALS = const [
     title: 'Moong',
     affordability: Affordability.Affordable,
     complexity: Complexity.Hard,
-    imageUrl:
-        'lib/assets/images/moong.jpg',
+    imageUrl: 'lib/assets/images/moong.jpg',
     duration: 50,
     retailPrice: 66,
     ingredients: [
@@ -375,6 +386,7 @@ const DUMMY_MEALS = const [
     isLactoseFree: false,
   ),
   Meal(
+    dummyType: 0,
     id: 'm10',
     categories: [
       'c10',
@@ -382,8 +394,7 @@ const DUMMY_MEALS = const [
     title: 'Safflower seeds',
     affordability: Affordability.Luxurious,
     complexity: Complexity.Simple,
-    imageUrl:
-        'lib/assets/images/safflower_seeds.jpg',
+    imageUrl: 'lib/assets/images/safflower_seeds.jpg',
     duration: 34,
     retailPrice: 44,
     ingredients: [

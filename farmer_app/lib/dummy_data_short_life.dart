@@ -7,57 +7,68 @@ const DUMMY_CATEGORIES = const [
   Category(
     id: 'c1',
     title: 'Tomato',
-    color: Colors.purple,
+    dummyType: 0,
+    color: Colors.red,
   ),
   Category(
     id: 'c2',
     title: 'Potato',
-    color: Colors.red,
+    dummyType: 0,
+    color: Colors.purple,
   ),
   Category(
     id: 'c3',
     title: 'Ladies Finger',
-    color: Colors.orange,
+    dummyType: 0,
+    color: Colors.amber,
   ),
   Category(
     id: 'c4',
     title: 'Beetroot',
-    color: Colors.amber,
+    dummyType: 0,
+    color: Colors.orange,
   ),
   Category(
     id: 'c5',
     title: 'Pumpkin',
+    dummyType: 0,
     color: Colors.blue,
   ),
   Category(
     id: 'c6',
     title: 'Carrot',
+    dummyType: 0,
     color: Colors.green,
   ),
   Category(
     id: 'c7',
     title: 'Radish',
-    color: Colors.lightBlue,
+    dummyType: 0,
+    color: Colors.lightGreen,
   ),
   Category(
     id: 'c8',
     title: 'Turnip',
-    color: Colors.lightGreen,
+    dummyType: 0,
+    color: Colors.lightBlue,
   ),
   Category(
     id: 'c9',
     title: 'Beans',
-    color: Colors.pink,
+    dummyType: 0,
+    color: Colors.teal,
   ),
   Category(
     id: 'c10',
     title: 'Onion',
-    color: Colors.teal,
+    dummyType: 0,
+    color: Colors.pink,
   ),
 ];
 
 const DUMMY_MEALS = const [
   Meal(
+    dummyType: 1,
     id: 'm1',
     categories: [
       'c1',
@@ -66,8 +77,8 @@ const DUMMY_MEALS = const [
     affordability: Affordability.Affordable,
     complexity: Complexity.Simple,
     imageUrl: 'lib/assets/images/coconut.jpg',
-    duration: 28,
-    retailPrice: 32,
+    duration: 53,
+    retailPrice: 25,
     ingredients: [
       '4 Tomatoes',
       '1 Tablespoon of Olive Oil',
@@ -91,6 +102,7 @@ const DUMMY_MEALS = const [
     isLactoseFree: true,
   ),
   Meal(
+    dummyType: 1,
     id: 'm2',
     categories: [
       'c2',
@@ -98,10 +110,9 @@ const DUMMY_MEALS = const [
     title: 'Potato',
     affordability: Affordability.Affordable,
     complexity: Complexity.Simple,
-    imageUrl:
-        'lib/assets/images/wheat.jpg',
-    duration: 15,
-    retailPrice: 26,
+    imageUrl: 'lib/assets/images/wheat.jpg',
+    duration: 36,
+    retailPrice: 42,
     ingredients: [
       '1 Slice White Bread',
       '1 Slice Ham',
@@ -120,6 +131,7 @@ const DUMMY_MEALS = const [
     isLactoseFree: false,
   ),
   Meal(
+    dummyType: 1,
     id: 'm3',
     categories: [
       'c3',
@@ -127,10 +139,9 @@ const DUMMY_MEALS = const [
     title: 'Ladies Finger',
     affordability: Affordability.Pricey,
     complexity: Complexity.Simple,
-    imageUrl:
-        'lib/assets/images/paddy.jpg',
-    duration: 18,
-    retailPrice: 25,
+    imageUrl: 'lib/assets/images/paddy.jpg',
+    duration: 28,
+    retailPrice: 38,
     ingredients: [
       '300g Cattle Hack',
       '1 Tomato',
@@ -152,6 +163,7 @@ const DUMMY_MEALS = const [
     isLactoseFree: true,
   ),
   Meal(
+    dummyType: 1,
     id: 'm4',
     categories: [
       'c4',
@@ -159,10 +171,9 @@ const DUMMY_MEALS = const [
     title: 'Beetroot',
     affordability: Affordability.Luxurious,
     complexity: Complexity.Challenging,
-    imageUrl:
-        'lib/assets/images/soyabean.jpg',
-    duration: 40,
-    retailPrice: 53,
+    imageUrl: 'lib/assets/images/soyabean.jpg',
+    duration: 26,
+    retailPrice: 34,
     ingredients: [
       '8 Veal Cutlets',
       '4 Eggs',
@@ -188,6 +199,7 @@ const DUMMY_MEALS = const [
     isLactoseFree: false,
   ),
   Meal(
+    dummyType: 1,
     id: 'm5',
     categories: [
       'c5',
@@ -195,10 +207,9 @@ const DUMMY_MEALS = const [
     title: 'Pumpkin',
     affordability: Affordability.Luxurious,
     complexity: Complexity.Simple,
-    imageUrl:
-        'lib/assets/images/niger_seeds.jpg',
-    duration: 45,
-    retailPrice: 60,
+    imageUrl: 'lib/assets/images/niger_seeds.jpg',
+    duration: 24,
+    retailPrice: 26,
     ingredients: [
       'Arugula',
       'Lamb\'s Lettuce',
@@ -223,6 +234,7 @@ const DUMMY_MEALS = const [
     isLactoseFree: true,
   ),
   Meal(
+    dummyType: 1,
     id: 'm6',
     categories: [
       'c6',
@@ -230,10 +242,9 @@ const DUMMY_MEALS = const [
     title: 'Carrot',
     affordability: Affordability.Affordable,
     complexity: Complexity.Hard,
-    imageUrl:
-        'lib/assets/images/Jowar.jpg',
-    duration: 21,
-    retailPrice: 32,
+    imageUrl: 'lib/assets/images/Jowar.jpg',
+    duration: 30,
+    retailPrice: 35,
     ingredients: [
       '4 Sheets of Gelatine',
       '150ml Orange Juice',
@@ -259,6 +270,7 @@ const DUMMY_MEALS = const [
     isLactoseFree: false,
   ),
   Meal(
+    dummyType: 1,
     id: 'm7',
     categories: [
       'c7',
@@ -266,10 +278,9 @@ const DUMMY_MEALS = const [
     title: 'Radish',
     affordability: Affordability.Affordable,
     complexity: Complexity.Simple,
-    imageUrl:
-        'lib/assets/images/maize.jpg',
-    duration: 14,
-    retailPrice: 26,
+    imageUrl: 'lib/assets/images/maize.jpg',
+    duration: 35,
+    retailPrice: 45,
     ingredients: [
       '1 1/2 Cups all-purpose Flour',
       '3 1/2 Teaspoons Baking Powder',
@@ -291,6 +302,7 @@ const DUMMY_MEALS = const [
     isLactoseFree: false,
   ),
   Meal(
+    dummyType: 1,
     id: 'm8',
     categories: [
       'c8',
@@ -298,8 +310,7 @@ const DUMMY_MEALS = const [
     title: 'Turnip',
     affordability: Affordability.Pricey,
     complexity: Complexity.Challenging,
-    imageUrl:
-        'lib/assets/images/ragi.jpg',
+    imageUrl: 'lib/assets/images/ragi.jpg',
     duration: 36,
     retailPrice: 47,
     ingredients: [
@@ -325,6 +336,7 @@ const DUMMY_MEALS = const [
     isLactoseFree: true,
   ),
   Meal(
+    dummyType: 1,
     id: 'm9',
     categories: [
       'c9',
@@ -332,10 +344,9 @@ const DUMMY_MEALS = const [
     title: 'Beans',
     affordability: Affordability.Affordable,
     complexity: Complexity.Hard,
-    imageUrl:
-        'lib/assets/images/moong.jpg',
-    duration: 50,
-    retailPrice: 66,
+    imageUrl: 'lib/assets/images/moong.jpg',
+    duration: 38,
+    retailPrice: 22,
     ingredients: [
       '1 Teaspoon melted Butter',
       '2 Tablespoons white Sugar',
@@ -375,6 +386,7 @@ const DUMMY_MEALS = const [
     isLactoseFree: false,
   ),
   Meal(
+    dummyType: 1,
     id: 'm10',
     categories: [
       'c10',
@@ -382,10 +394,9 @@ const DUMMY_MEALS = const [
     title: 'Onion',
     affordability: Affordability.Luxurious,
     complexity: Complexity.Simple,
-    imageUrl:
-        'lib/assets/images/safflower_seeds.jpg',
-    duration: 34,
-    retailPrice: 44,
+    imageUrl: 'lib/assets/images/safflower_seeds.jpg',
+    duration: 42,
+    retailPrice: 31,
     ingredients: [
       'White and Green Asparagus',
       '30g Pine Nuts',
