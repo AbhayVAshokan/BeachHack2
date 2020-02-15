@@ -1,29 +1,18 @@
 import 'package:flutter/material.dart';
+import 'package:toast/toast.dart';
 
 import '../widgets/meal_item.dart';
 import '../dummy_data.dart';
 
-class CategoryMealsScreen extends StatelessWidget {
+class CategoryMealsScreen extends StatefulWidget {
   static const routeName = '/category-meals';
-  // final String categoryId;
-  // final String categoryTitle;
 
-  // CategoryMealsScreen(this.categoryId, this.categoryTitle);
+  @override
+  _CategoryMealsScreenState createState() => _CategoryMealsScreenState();
+}
 
-  void _showBottomNavigation(context) {
-    showModalBottomSheet(
-        context: context,
-        builder: (_) {
-          return Container(
-            color: Colors.black26,
-            child: Card(
-              color: Colors.black12,
-              elevation: 10,
-              child: Text("Hello World"),
-            ),
-          );
-        });
-  }
+class _CategoryMealsScreenState extends State<CategoryMealsScreen> {
+  final nameController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -39,7 +28,7 @@ class CategoryMealsScreen extends StatelessWidget {
         title: Text(categoryTitle),
       ),
       body: Column(
-        mainAxisAlignment: MainAxisAlignment.spaceAround,
+        // mainAxisAlignment: MainAxisAlignment.rr,
         children: <Widget>[
           Expanded(
             child: ListView.builder(
@@ -59,49 +48,69 @@ class CategoryMealsScreen extends StatelessWidget {
           ),
           Container(
             padding: EdgeInsets.all(5),
-            width: MediaQuery.of(context).size.width,
-            height: (MediaQuery.of(context).size.height - 5) * 0.40,
-            child: Card(
-              child: Align(
-                alignment: Alignment.topLeft,
-                child: Row(
-                  // mainAxisAlignment: MainAxisAlignment.spa,
+            child: Container(
+              height: (MediaQuery.of(context).size.height - 5) * 0.38,
+              child: Card(
+                child: Column(
                   children: <Widget>[
-                    Container(
-                      height: 125,
-                      width: 125,
-                      child: Container(
-                        margin: EdgeInsets.all(5),
-                        child: Card(
-                          color: Colors.lightGreen,
-                          child: Center(
-                            child: Column(
-                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                              children: <Widget>[
-                                SizedBox(
-                                  height: 5,
+                    Align(
+                      alignment: Alignment.topLeft,
+                      child: Row(
+                        children: <Widget>[
+                          Container(
+                            height: 125,
+                            width: 125,
+                            margin: EdgeInsets.all(5),
+                            child: Card(
+                              color: Colors.lightGreen,
+                              child: Center(
+                                child: Column(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceEvenly,
+                                  children: <Widget>[
+                                    SizedBox(
+                                      height: 5,
+                                    ),
+                                    Text(
+                                      "RETAIL PRICE",
+                                      style: TextStyle(
+                                          fontFamily: "Roboto", fontSize: 15),
+                                    ),
+                                    Text(
+                                      "Rs.10",
+                                      style: TextStyle(
+                                        fontSize: 30,
+                                        fontWeight: FontWeight.bold,
+                                      ),
+                                    ),
+                                    SizedBox(
+                                      height: 5,
+                                    ),
+                                  ],
                                 ),
-                                Text(
-                                  "RETAIL PRICE",
-                                  style: TextStyle(
-                                      fontFamily: "Roboto", fontSize: 15),
-                                ),
-                                Text(
-                                  "Rs.10",
-                                  style: TextStyle(
-                                    fontSize: 30,
-                                    fontWeight: FontWeight.bold,
-                                  ),
-                                ),
-                                SizedBox(
-                                  height: 5,
-                                ),
-                              ],
+                              ),
                             ),
                           ),
-                        ),
+                        ],
                       ),
                     ),
+                    // Row(
+                    //   children: <Widget>[
+                        Container(
+                          padding: EdgeInsets.all(10),
+                          child: TextField(
+                            keyboardType: TextInputType.number,
+                            decoration: InputDecoration(
+                              labelText: 'Enter Quantity',
+                            ),
+                            style: Theme.of(context).textTheme.title,
+                            controller: nameController,
+                          ),
+                        ),
+                        // RaisedButton(onPressed: null, child: Text("ADD")),
+                    //   ],
+                    // ),
+          RaisedButton(onPressed: () => nameController.text.isNotEmpty ? showToast("Database Updated", gravity: Toast.CENTER) : showToast("Enter Quantity", gravity: Toast.BOTTOM), child: Text("ADD"),),
                   ],
                 ),
               ),
@@ -109,13 +118,10 @@ class CategoryMealsScreen extends StatelessWidget {
           ),
         ],
       ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () => _showBottomNavigation(context),
-        child: Icon(
-          Icons.cloud,
-        ),
-      ),
-      floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
     );
+  }
+
+  void showToast(String msg, {int duration, int gravity}) {
+    Toast.show(msg, context, duration: duration, gravity: gravity);
   }
 }
