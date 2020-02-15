@@ -13,6 +13,7 @@ class CategoryMealsScreen extends StatefulWidget {
 
 class _CategoryMealsScreenState extends State<CategoryMealsScreen> {
   final nameController = TextEditingController();
+  int totalQuantity = 1010;
 
   @override
   Widget build(BuildContext context) {
@@ -56,10 +57,11 @@ class _CategoryMealsScreenState extends State<CategoryMealsScreen> {
                     Align(
                       alignment: Alignment.topLeft,
                       child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: <Widget>[
                           Container(
                             height: 125,
-                            width: 125,
+                            width: MediaQuery.of(context).size.width * 0.35,
                             margin: EdgeInsets.all(5),
                             child: Card(
                               color: Colors.lightGreen,
@@ -91,26 +93,66 @@ class _CategoryMealsScreenState extends State<CategoryMealsScreen> {
                               ),
                             ),
                           ),
+
+                          Container(
+                            height: 125,
+                            width: MediaQuery.of(context).size.width * 0.55,
+                            margin: EdgeInsets.all(5),
+                            child: Card(
+                              color: Colors.green,
+                              child: Center(
+                                child: Column(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceEvenly,
+                                  children: <Widget>[
+                                    SizedBox(
+                                      height: 5,
+                                    ),
+                                    Text(
+                                      "AVAILABLE QUANTITY",
+                                      style: TextStyle(
+                                          fontFamily: "Roboto", fontSize: 15),
+                                    ),
+                                    Text(
+                                      "$totalQuantity Kg",
+                                      style: TextStyle(
+                                        fontSize: 30,
+                                        fontWeight: FontWeight.bold,
+                                      ),
+                                    ),
+                                    SizedBox(
+                                      height: 5,
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            ),
+                          ),
                         ],
                       ),
                     ),
-                    // Row(
-                    //   children: <Widget>[
-                        Container(
-                          padding: EdgeInsets.all(10),
-                          child: TextField(
-                            keyboardType: TextInputType.number,
-                            decoration: InputDecoration(
-                              labelText: 'Enter Quantity',
-                            ),
-                            style: Theme.of(context).textTheme.title,
-                            controller: nameController,
-                          ),
+                    Container(
+                      padding: EdgeInsets.all(10),
+                      child: TextField(
+                        keyboardType: TextInputType.number,
+                        decoration: InputDecoration(
+                          labelText: 'Enter Quantity (in Kg)',
                         ),
-                        // RaisedButton(onPressed: null, child: Text("ADD")),
-                    //   ],
-                    // ),
-          RaisedButton(onPressed: () => nameController.text.isNotEmpty ? showToast("Database Updated", gravity: Toast.CENTER) : showToast("Enter Quantity", gravity: Toast.BOTTOM), child: Text("ADD"),),
+                        style: Theme.of(context).textTheme.title,
+                        controller: nameController,
+                      ),
+                    ),
+                    RaisedButton(
+                      onPressed: () => nameController.text.isNotEmpty
+                          ? showToast(
+                              "Database Updated",
+                              nameController,
+                              gravity: Toast.CENTER,
+                            )
+                          : showToast("Enter Quantity", nameController,
+                              gravity: Toast.BOTTOM),
+                      child: Text("ADD"),
+                    ),
                   ],
                 ),
               ),
@@ -121,7 +163,12 @@ class _CategoryMealsScreenState extends State<CategoryMealsScreen> {
     );
   }
 
-  void showToast(String msg, {int duration, int gravity}) {
+  void showToast(String msg, TextEditingController controller,
+      {int duration, int gravity}) {
+    setState(() {
+      totalQuantity += int.parse(controller.text);
+    });
+    controller.clear();
     Toast.show(msg, context, duration: duration, gravity: gravity);
   }
 }

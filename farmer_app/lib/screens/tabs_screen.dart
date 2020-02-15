@@ -36,7 +36,32 @@ class _TabsScreenState extends State<TabsScreen> {
             child: Card(
               color: Colors.black12,
               elevation: 10,
-              child: Text("Hello World"),
+              child: Card(
+                child: Container(
+                  padding: EdgeInsets.all(5),
+                  child: Row(
+                    children: <Widget>[
+                      Container(
+                        padding: EdgeInsets.only(top: 5, bottom: 5, left: 5, right: 5),
+                        child: Image.asset(
+                          'lib/assets/images/thunder_shower.png',
+                          height: 150,
+                          width: 150,
+                          fit: BoxFit.cover,
+                        ),
+                      ),
+                      Container(
+                        width: 200,
+                        child: Text(
+                          'Due to overwhelming influence of North-Westerly winds it is expected that there will be over 520 cm of rain in North-Eastern and Southern States.', style: TextStyle(fontFamily: 'Roboto', fontSize: 17),
+                          maxLines: 10,
+                          overflow: TextOverflow.ellipsis,
+                        ),
+                      )
+                    ],
+                  ),
+                ),
+              ),
             ),
           );
         });

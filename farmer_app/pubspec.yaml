@@ -65,6 +65,7 @@ flutter:
    - lib/assets/images/safflower_seeds.jpg
    - lib/assets/images/soyabean.jpg
    - lib/assets/images/wheat.jpg
+   - lib/assets/images/thunder_shower.png
 
 
   # An image asset can refer to one or more resolution-specific "variants", see
